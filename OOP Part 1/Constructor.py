@@ -10,6 +10,11 @@
 
 #This is called the default constructor.
 class Student:
+        def __init__(self):
+                pass
+s1 =Student() 
+
+class Student:
         name='Alex'
         def __init__(self):  # Constructor is a special method. It can accept parameters and must have self as the first parameter.
                 print('ADDing data in the database....')
@@ -17,6 +22,8 @@ class Student:
 
 s1=Student()
 # we can pass multiple parameters in the constructor.
+
+# parameterized constructors
 class Student1:
         def __init__(self , fullname):
                 self.name=fullname  # self.name is an instance (object) variable created inside the constructor.
