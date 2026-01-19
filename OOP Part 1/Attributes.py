@@ -13,3 +13,23 @@ class Student:
     def __init__(self,name ,age):
         self.name=name # instance attribute
         self.age=age   # instance attribute
+
+
+class Car:
+    car_brand='BMW'
+    def __init__(self,color,price):
+        self.color=color
+        self.price=price
+car1=Car('blue',"$200")
+print(Car.car_brand)   
+
+
+class Car:
+    car_brand='Toyota'# class attribute
+    color='Anonymous' # Class attribute (default value if no color is provided)
+                      
+    def __init__(self,color, price):
+        self.color=color # obj attribute . obj attribute > class attribute
+        self.price=price
+c1=Car('black','$300')
+print(c1.color)        
