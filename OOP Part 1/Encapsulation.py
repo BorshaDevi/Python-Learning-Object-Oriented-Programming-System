@@ -3,7 +3,7 @@
 
 class BankAccount:
     def __init__(self):
-        self._balance=0
+        self._balance=0  # double underscore = private
         
     def deposit(self,amount):
         self._balance += amount
@@ -13,4 +13,4 @@ acc=BankAccount()
 acc.deposit(1000)
 print(acc.getBalance())            
 # See here,I deposit and then I see how many taka in my account.
-acc._balance=10000 #Not allowed: direct access to private variables. This balance is encapsulation. Because this is private.
+acc._balance=10000 #Allowed in Python, but NOT recommended (it's a protected variable)
