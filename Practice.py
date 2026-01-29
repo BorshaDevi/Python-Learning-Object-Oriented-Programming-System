@@ -232,3 +232,19 @@ class ATM:
 c1=ATM(12345,1000)
 c1.withdraw(12345,500) 
 c1.check_balance(1234)   
+
+# 11. Create a Person class:
+# attributes: name, age
+# method: is_adult()
+# If age ≥ 18 → Adult, else Minor.
+class Person:
+    def __init__(self,name, age):
+        self.name=name
+        self.age=age
+    def is_adult(self):
+        if self.age >=18:
+            print('Adult')
+        else:
+            print('Minor')  
+p1=Person('Alex',17)       
+p1.is_adult()           
