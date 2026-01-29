@@ -141,8 +141,94 @@ mob1=Mobile('Realme',15000)
 print(f"This mobile brand is {mob1.brand} and this price {mob1.apply_discount(10):.2f}")
 
 
+# 8. Create a Book class:
+# attributes: title, author, available (True/False)
+# methods:
+# borrow_book()
+# return_book()
+# If book not available, show message.
+class Book:
+    def __init__(self,title, author, available=True):
+        self.title=title
+        self.author=author
+        self.available=available
+    def borrow_book(self):
+        if self.available == True:
+            print(f"please take your book")
+            self.available=False
+        else:
+            print('This book is not available.')    
+    def return_book(self):
+        self.available=True
+        print("Thank you for return book")
+c1=Book('MyLife','Alex')
+c2=Book('MyLife','Alex')
+c1.borrow_book()
+c2.borrow_book()
+c1.borrow_book()
+c1.return_book()
+c1.borrow_book()
 
-      
-          
+# 9.Create a Product class:
+# attributes: name, price, quantity
+# method: total_price()
+# Create multiple objects and calculate grand total.
+products=[]
+class Product:
+    def __init__(self,name, price, quantity):
+        self.name=name
+        self.price=price
+        self.quantity=quantity
+    def total_price(self):
+         return self.price * self.quantity
+products.append(Product('apple',10,5)) 
+products.append(Product('mango',5,2)) 
+products.append(Product('banana',5,4)) 
+products.append(Product('lici',6,5)) 
+products.append(Product('jackfruit',20,3)) 
+print(products)
 
+grand_total=0
+for p in products:
+    # print(p.total_price())
+    grand_total +=p.total_price()
+print(grand_total)    
 
+# 10.Create an ATM class:
+# attributes: pin, balance
+# methods:
+# check_pin(pin)
+# withdraw(amount)
+# check_balance()
+# Withdrawal only works if PIN is correct.
+
+class ATM:
+    def __init__(self,pin,balance):
+        self.pin=pin
+        self.balance=balance
+    def check_pin(self, entered_pin):
+        if(self.pin == entered_pin):
+            return True
+        else:
+            print("PIN is not correct")
+            return False
+            
+    def withdraw(self,entered_pin,amount):
+        if self.check_pin(entered_pin):
+            if amount > self.balance:
+                return print(f"Insufficient balance")
+            else:
+                self.balance -=amount
+                print(f"Successfully withdraw {amount} tk.")
+        else:
+            print('Cannot withdraw')
+
+    def check_balance(self,entered_pin):
+        if self.check_pin(entered_pin):
+            return print(f"Now your total balance is {self.balance} tk.") 
+        else:
+            print("Cannot show balance due to wrong PIN")   
+        
+c1=ATM(12345,1000)
+c1.withdraw(12345,500) 
+c1.check_balance(1234)   
