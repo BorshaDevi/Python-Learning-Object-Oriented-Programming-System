@@ -19,7 +19,7 @@ print(Person.name)
 class Person:
     name="anonymous"
     @classmethod
-    def change_name(cls,name):
+    def change_name(cls,name): # cls is a reference to the class itself, similar to how self refers to the instance.
         cls.name=name
 p1=Person()
 p1.change_name('Alex')
