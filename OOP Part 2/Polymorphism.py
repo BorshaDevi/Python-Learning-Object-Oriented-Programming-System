@@ -1,4 +1,4 @@
-# overload
+
 # When the same operator is allowed to have different meanings  according to the context.
 print(1+2) # 3  additions .(number type)
 print("Toma"+"to" ) # Tomato concatenation.(str type)
