@@ -20,6 +20,11 @@ num2.showNumber()
 
 # Dunder function/ magic method:
 # In python, methods that have double underscore before and after their name are called dunder function/magic method.
+
+# why use Dunder function?
+# we use dunder function so that objects can work with python built-in operators and functions.
+
+
 # There are so many dunder function in python.
 # __add__ -> a+b
 # __sub__ -> a-b
