@@ -10,13 +10,28 @@ class Complex:
         self.real=real
         self.img=img
     def showNumber(self):
-        print(self.real,"i +",self.img,"j")
+        print(self.real,"i +",self.img,"j")     
+    def __add__(self,num):
+        newReal=self.real + num.real
+        newImg=self.img + num.img
+        return Complex(newReal,newImg)     
+    def __sub__(self,num):
+        newReal=self.real - num.real
+        newImg=self.img - num.img
+        return Complex(newReal,newImg)     
 
+# num1=Complex(1,4)
+# num2=Complex(6,5)
+# num3=num1.add(num2)
+# num3.showNumber() # So, this is very painful and also not understandable.
+# so use dunder function.
 num1=Complex(1,4)
-num1.showNumber() 
-
 num2=Complex(6,5)
-num2.showNumber() 
+num3=num1 + num2
+num4=num1 - num2
+num3.showNumber()
+num4.showNumber()
+
 
 # Dunder function/ magic method:
 # In python, methods that have double underscore before and after their name are called dunder function/magic method.
