@@ -277,5 +277,17 @@ class Employee:
         print (f"Employee role is {self.role} . Department {self.department} and salary {self.salary}")
 e1=Employee("software Engineer","IT",50000)
 e1.showDetails()
-# Qs: 14  Create an Engineer class that inherits properties from Employee &  attributes:name & age.  
+# Qs: 14  Create an Engineer class that inherits properties from Employee & has additional attributes:name & age. 
+class Engineer(Employee): 
+    def __init__(self,name,age,role,department,salary):
+        self.name=name
+        self.age=age
+        super().__init__(role,department,salary)
+    def showEngineer(self):    
+        print(f"Employee name {self.name},age {self.age}")
+        super().showDetails()
+
+eng=Engineer('Rahul',25,"Backend Developer","IT",50000)
+eng.showEngineer()        
+       
 
