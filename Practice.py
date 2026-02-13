@@ -249,7 +249,7 @@
 # p1=Person('Alex',17)       
 # p1.is_adult()           
 
-# Qs: Define a Circle class to create a circle with radius r using the constructor.
+# Qs:12. Define a Circle class to create a circle with radius r using the constructor.
     # Define an Area() method of the class which calculates the area of the circle.
     # Define a Perimeter() method of the class which allows you to calculate the perimeter of the circle.
 class Circle:
@@ -259,7 +259,7 @@ class Circle:
         area=(3.1416) * (self.radius**2)
         print(area)
     def Perimeter(self):
-        perimeter= (2*3.1416 * self.radius)
+        perimeter= (2*3.1416 *self.radius)
         print(perimeter)
 c1=Circle(21) 
 c1.Area()               
@@ -267,5 +267,15 @@ c1.Perimeter()
 
 
 
-# Qs: Define a Employee class with attributes role,department & salary.This showDetails() method.
-    #  Create an Engineer class that inherits properties from Employee &  attributes:name & age.  
+# Qs:13. Define a Employee class with attributes role,department & salary.This class also as a showDetails() method.
+class Employee:
+    def __init__(self,role,department,salary):
+        self.role=role
+        self.department=department
+        self.salary=salary
+    def showDetails(self):
+        print (f"Employee role is {self.role} . Department {self.department} and salary {self.salary}")
+e1=Employee("software Engineer","IT",50000)
+e1.showDetails()
+# Qs: 14  Create an Engineer class that inherits properties from Employee &  attributes:name & age.  
+
