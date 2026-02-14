@@ -247,7 +247,92 @@ class Person:
         else:
             print('Minor')  
 p1=Person('Alex',17)       
-p1.is_adult()           
+p1.is_adult()  
+
+# Polymorphism :
+
+# 1:
+class Bird:
+   def fly(self):
+      pass         
+class Sparrow():
+   def fly(self):
+      print("Sparrow can fly")
+class Ostrich():
+   def fly(self):
+      print("Ostrich cannot fly")
+birds =[Sparrow(),Ostrich()]
+for bird in birds:
+   bird.fly()
+   
+# 2 :
+class Animal:
+    def sound(self):
+        pass
+class Cat(Animal):
+    def sound(self):
+        print("Meow Meow")
+class Dog(Animal):
+    def sound(self):
+        print('Bark Bark')
+class Cow(Animal):
+    def sound(self):
+        print("Moo Moo")                   
+animals=[Cat(),Dog(),Cow()]
+for ani in animals:
+    ani.sound()  
+
+
+
+# 3:
+class Payment:
+    def __init__(self,amount):
+        self.amount=amount
+    def pay(self):
+        pass    
+class BkashPayment(Payment):
+    def pay(self):
+        print(f"{self.amount} pay using Bkash")   
+class CardPayment(Payment):
+    def pay(self):
+        print (f"{self.amount} pay using Card")       
+class CashPayment(Payment):
+    def pay(self):
+        print (f"{self.amount} pay using Cash")     
+payments=[BkashPayment(50000),CardPayment(1000),CashPayment(20000)]
+for pa in payments:
+    pa.pay()
+
+
+
+# 4:
+class Shape:
+    def area(self):
+        pass
+class Circle(Shape):
+    def __init__(self,radius):
+        self.radius=radius
+    def area(self):
+        print(3.1416 * (self.radius ** 2))
+class Rectangle(Shape):
+    def __init__(self,length,width):
+        self.length=length
+        self.width=width
+    def area(self):
+        print(self.length * self.width)
+class Triangle(Shape):
+    def __init__(self,base,height):
+        self.base=base
+        self.height=height
+    def area(self):
+        print((0.5) *self.base* self.height)
+
+shapes=[Circle(5),Rectangle(4,5),Triangle(6,4)]  
+for shap in shapes :
+    shap.area()  
+
+
+
 
 # Qs:12. Define a Circle class to create a circle with radius r using the constructor.
     # Define an Area() method of the class which calculates the area of the circle.
@@ -303,3 +388,5 @@ class Order:
 ord1=Order('Chips',50)
 ord2=Order('Chocolate',30)
 print(ord1 > ord2)
+
+
