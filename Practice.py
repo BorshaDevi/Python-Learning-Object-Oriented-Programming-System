@@ -389,29 +389,39 @@
 # ord2=Order('Chocolate',30)
 # print(ord1 > ord2)
 
-# 16. Compare Shapes
-class Rectangle:
-    def __init__(self,length,width):
-        self.length=length
-        self.width=width
-    def area(self):
-        area=self.length * self.width
-        return area
-    def __gt__(self,area2):
-        check =self.area() > area2.area()
-        return check
-class Square():
-    def __init__(self,length):
-        self.length=length    
-    def area(self):
-        area=(self.length)**2
-        return area
+# # 16. Compare Shapes
+# class Rectangle:
+#     def __init__(self,length,width):
+#         self.length=length
+#         self.width=width
+#     def area(self):
+#         area=self.length * self.width
+#         return area
+#     def __gt__(self,area2):
+#         check =self.area() > area2.area()
+#         return check
+# class Square():
+#     def __init__(self,length):
+#         self.length=length    
+#     def area(self):
+#         area=(self.length)**2
+#         return area
     
 
-r1=Rectangle(3,4)   
-s1=Square(4)                 
-if(r1> s1):
-    print('Rectangle is bigger')
-else:
-    print("Square is bigger")    
+# r1=Rectangle(3,4)   
+# s1=Square(4)                 
+# if(r1> s1):
+#     print('Rectangle is bigger')
+# else:
+#     print("Square is bigger")  
+
+
+# 17:Container Length
+class Bag:
+    def __init__(self,list_it):
+        self.list_item=list(list_it)
+    def __len__(self):
+        return len(self.list_item)
+b=Bag(('lipstick','brush','powder'))
+print(len(b)) 
 
