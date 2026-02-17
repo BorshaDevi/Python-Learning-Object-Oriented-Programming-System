@@ -498,6 +498,48 @@ print(len(t))
 s=Square()  
 print(len(s)) 
 
+# 23: Book Comparison -> pages return,compare two books depend on pages.
+class Book:
+    def __init__(self,title,pages):
+        self.title= title
+        self.pages= pages
+    def __str__(self):
+        return (f"This is {self.title} book and this pages length {self.pages}.")    
+    def __len__(self):
+        return self.pages
+    def __gt__(self,seo2):
+        compare=self.pages> seo2.pages
+        return compare
+b1=Book('A Little Life',200)
+b2=Book('The Bance Code',400)
+print(b1)
+print(len(b1))
+print(b2)
+print(len(b2))
+if (b1>b2):
+    print(f"{b1.title} book length is bigger.")
+else:
+     print(f"{b2.title} book length is bigger.")   
 
 
-    
+# 24: BankAccount -> addition two account balance , check equal balance
+class BankAccount:
+    def __init__(self,owner,balance):
+        self.owner=owner
+        self.balance=balance
+    def __add__(self,bal2):
+        return self.balance + bal2.balance
+    def __eq__(self,bal2):
+        return self.balance == bal2.balance
+    def __str__(self):
+        return (f"{self.owner} is your balance {self.balance} ") 
+
+own1=BankAccount("Alex",500)
+print(own1)
+own2=BankAccount("Eva",500)
+value=own1 + own2
+print(value)
+if(own1 == own2):
+    print(own1.owner ,'and ',own2.owner ,"youre balance are equal" )
+else:
+    print(own1.owner ,'and ',own2.owner ,"youre balance are not equal" )
