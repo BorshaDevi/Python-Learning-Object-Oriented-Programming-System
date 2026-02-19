@@ -544,23 +544,53 @@
 # else:
 #     print(own1.owner ,'and ',own2.owner ,"youre balance are not equal" )
 
-# 25: ShoppingCart
-class ShoppingCart:
-    def __init__(self,item_li):
-        self.items_list=item_li
-    def __len__(self):
-        return len(self.items_list)    
-    def __getitem__(self,value):
-        return self.items_list[value]
-    def __contains__(self,item):
-        return  item in self.items_list   
-    def __str__(self):
-        return (f"{s1.items_list} this the list.")
-s1=ShoppingCart(["apple","banana","orange","Lemon","Lici"])
-print(len(s1))   
-print(s1[2]) 
-if ("orange" in s1):
-    print("Ok")
-else:
-    print('Not ok')    
-print(s1)    
+# # 25: ShoppingCart
+# class ShoppingCart:
+#     def __init__(self,item_li):
+#         self.items_list=item_li
+#     def __len__(self):
+#         return len(self.items_list)    
+#     def __getitem__(self,value):
+#         return self.items_list[value]
+#     def __contains__(self,item):
+#         return  item in self.items_list   
+#     def __str__(self):
+#         return (f"{s1.items_list} this the list.")
+# s1=ShoppingCart(["apple","banana","orange","Lemon","Lici"])
+# print(len(s1))   
+# print(s1[2]) 
+# if ("orange" in s1):
+#     print("Ok")
+# else:
+#     print('Not ok')    
+# print(s1)   
+
+#  26: Shape Area (Method Overriding)
+class Shape:
+    def area(self):
+        pass
+class Rectangle(Shape):
+    def __init__(self,height,width):
+        self.height=height
+        self.width=width
+    def area(self):
+        area=self.height * self.width    
+        return area
+class Circle(Shape):
+    def __init__(self,radius):
+        self.radius=radius 
+    def area(self):
+        area=2*(3.1416)* (self.radius)**2    
+        return area    
+class Triangle(Shape): 
+        def __init__(self,height,base):
+            self.height=height
+            self.base=base
+        def area(self):
+            area=0.5 * self.height * self.base    
+            return area    
+s=Shape()
+lists=[Rectangle(3,4),Circle(4),Triangle(4,5)]
+for i in lists:
+    print(i.area(),"area value")
+               
