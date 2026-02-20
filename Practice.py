@@ -565,32 +565,59 @@
 #     print('Not ok')    
 # print(s1)   
 
-#  26: Shape Area (Method Overriding)
-class Shape:
-    def area(self):
-        pass
-class Rectangle(Shape):
-    def __init__(self,height,width):
-        self.height=height
-        self.width=width
-    def area(self):
-        area=self.height * self.width    
-        return area
-class Circle(Shape):
-    def __init__(self,radius):
-        self.radius=radius 
-    def area(self):
-        area=2*(3.1416)* (self.radius)**2    
-        return area    
-class Triangle(Shape): 
-        def __init__(self,height,base):
-            self.height=height
-            self.base=base
-        def area(self):
-            area=0.5 * self.height * self.base    
-            return area    
-s=Shape()
-lists=[Rectangle(3,4),Circle(4),Triangle(4,5)]
-for i in lists:
-    print(i.area(),"area value")
-               
+# #  26: Shape Area (Method Overriding)
+# class Shape:
+#     def area(self):
+#         pass
+# class Rectangle(Shape):
+#     def __init__(self,height,width):
+#         self.height=height
+#         self.width=width
+#     def area(self):
+#         area=self.height * self.width    
+#         return area
+# class Circle(Shape):
+#     def __init__(self,radius):
+#         self.radius=radius 
+#     def area(self):
+#         area=2*(3.1416)* (self.radius)**2    
+#         return area    
+# class Triangle(Shape): 
+#         def __init__(self,height,base):
+#             self.height=height
+#             self.base=base
+#         def area(self):
+#             area=0.5 * self.height * self.base    
+#             return area    
+# s=Shape()
+# lists=[Rectangle(3,4),Circle(4),Triangle(4,5)]
+# for i in lists:
+#     print(i.area(),"area value")
+
+# 27.Custom Vector Class
+class Vector:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def __add__(self,other):
+        newx=self.x + other.x
+        newy=self.y + other.y
+        return Vector (newx,newy)
+    def __sub__(self,other):
+        newx=self.x - other.x
+        newy=self.y - other.y
+        return Vector (newx,newy)
+    def __mul__(self,other):
+        newx=self.x * other.x
+        newy=self.y * other.y
+        return Vector (newx,newy)
+    def __repr__(self):
+        return (f"{self.x} {self.y}")
+v1=Vector(10,5)    
+v2=Vector(4,2)    
+value=v1 + v2
+print(value)
+sub=v1 - v2
+print(sub)
+multi=(v1 * v2)
+print(multi)
