@@ -627,4 +627,29 @@ class Employee:
     def __init__(self,name,salary):
         self.name=name
         self.salary=salary
-        
+    def __lt__(self,other):
+        return self.salary <= other.salary
+    def __eq__(self,other):
+        return self.salary== other.salary
+    def __repr__(self):
+        return (f'{self.name} and {self.salary}')
+employee=[
+    Employee('Helen',50000),
+    Employee('Alex',20000),
+    Employee('Eva',30000),
+    
+    ]
+employee.sort()
+print(employee)
+
+
+# # 29: Custom Range Class
+# class Range():
+#     def __init__(self,start,stop):
+#         self.start=start
+#         self.stop=stop
+#     def __iter__(self):
+#         pass
+#     def __next__(self):
+#         pass
+# r1=Range()    
