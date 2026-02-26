@@ -661,3 +661,6 @@ class Range():
 range1=Range(1,5)    
 for i in range1:
     print(i)
+
+# 30.Student Class
+ 
