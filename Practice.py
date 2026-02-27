@@ -643,7 +643,7 @@
 # print(employee)
 
 
-# 29: Custom Range Class
+# # 29: Custom Range Class
 # class Range():
 #     def __init__(self,start,stop):
 #         self.start=start
@@ -662,22 +662,48 @@
 # for i in range1:
 #     print(i)
 
-# 30.Student Class
-class Student:
-    def __init__(self,name,marks):
-        self.name=name
-        self.marks=marks
+# # 30.Student Class
+# class Student:
+#     def __init__(self,name,marks):
+#         self.name=name
+#         self.marks=marks
+#     def __str__(self):
+#         return (f"Student name is {self.name}.")    
+#     def __len__(self):
+#         return len(self.marks)
+#     def __eq__(self, marks2):
+#         return self.marks == marks2.marks
+# s1=Student('Alex',[65,40,80]) 
+# s2=Student('Eva',[65,34,80])  
+# s3=Student('Eva',[65,34,80])  
+# print(len(s2))  
+# if(s2==s3):
+#     print('Marks are equal')
+# else:
+#     print('Marks are not equal')    
+
+# 31.Wallet Class
+class Wallet:
+    def __init__(self,owner,amount):
+        self.owner=owner
+        self.amount=amount
+    def __add__(self,self2):
+        newAmount=self.amount +  self2.amount 
+        return Wallet(self.owner,newAmount) 
+    def __sub__(self,self2):
+        newAmount=abs(self.amount - self2.amount)
+        return Wallet(self.owner,newAmount)
+    def __eq__(self, self2):
+        return self.amount== self2.amount
     def __str__(self):
-        return (f"Student name is {self.name}.")    
-    def __len__(self):
-        return len(self.marks)
-    def __eq__(self, marks2):
-        return self.marks == marks2.marks
-s1=Student('Alex',[65,40,80]) 
-s2=Student('Eva',[65,34,80])  
-s3=Student('Eva',[65,34,80])  
-print(len(s2))  
-if(s2==s3):
-    print('Marks are equal')
+        return (f"Owner name is {self.owner} and amount{self.amount}")
+w1=Wallet('Elon',500) 
+w2=Wallet('Eva',500)
+amount=w1+w2
+print(amount)
+elimanet=w1-w2
+print(elimanet)
+if(w1==w2):
+    print('two owner values are equal')
 else:
-    print('Marks are not equal')    
+     print('two owner values are not equal')   
