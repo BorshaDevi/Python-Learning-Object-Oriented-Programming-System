@@ -725,7 +725,7 @@ class Rectangle:
         area2=self2.area()
         return area1 < area2 
     def __mul__(self,scalar):
-            return self.width * scalar, self.height * scalar
+            return Rectangle(self.width * scalar, self.height * scalar)
 r1=Rectangle(3,4)    
 r2=Rectangle(3,4)
 print(r1.area())
@@ -739,5 +739,5 @@ if(r1<r2):
 else:    
     print("r1 rectangle are not less r2")
 r3=r1*2
-print(r3)    
+print(r3.area())    
 
