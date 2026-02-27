@@ -644,23 +644,40 @@
 
 
 # 29: Custom Range Class
-class Range():
-    def __init__(self,start,stop):
-        self.start=start
-        self.stop=stop
-    def __iter__(self):
-       self.current=self.start
-       return self
-    def __next__(self):
-        if(self.current>=self.stop):
-            raise StopIteration  
-        else:
-           value=self.current
-           self.current +=1
-           return value
-range1=Range(1,5)    
-for i in range1:
-    print(i)
+# class Range():
+#     def __init__(self,start,stop):
+#         self.start=start
+#         self.stop=stop
+#     def __iter__(self):
+#        self.current=self.start
+#        return self
+#     def __next__(self):
+#         if(self.current>=self.stop):
+#             raise StopIteration  
+#         else:
+#            value=self.current
+#            self.current +=1
+#            return value
+# range1=Range(1,5)    
+# for i in range1:
+#     print(i)
 
 # 30.Student Class
- 
+class Student:
+    def __init__(self,name,marks):
+        self.name=name
+        self.marks=marks
+    def __str__(self):
+        return (f"Student name is {self.name}.")    
+    def __len__(self):
+        return len(self.marks)
+    def __eq__(self, marks2):
+        return self.marks == marks2.marks
+s1=Student('Alex',[65,40,80]) 
+s2=Student('Eva',[65,34,80])  
+s3=Student('Eva',[65,34,80])  
+print(len(s2))  
+if(s2==s3):
+    print('Marks are equal')
+else:
+    print('Marks are not equal')    
