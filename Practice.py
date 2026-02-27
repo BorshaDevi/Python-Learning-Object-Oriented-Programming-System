@@ -682,28 +682,62 @@
 # else:
 #     print('Marks are not equal')    
 
-# 31.Wallet Class
-class Wallet:
-    def __init__(self,owner,amount):
-        self.owner=owner
-        self.amount=amount
-    def __add__(self,self2):
-        newAmount=self.amount +  self2.amount 
-        return Wallet(self.owner,newAmount) 
-    def __sub__(self,self2):
-        newAmount=abs(self.amount - self2.amount)
-        return Wallet(self.owner,newAmount)
-    def __eq__(self, self2):
-        return self.amount== self2.amount
-    def __str__(self):
-        return (f"Owner name is {self.owner} and amount{self.amount}")
-w1=Wallet('Elon',500) 
-w2=Wallet('Eva',500)
-amount=w1+w2
-print(amount)
-elimanet=w1-w2
-print(elimanet)
-if(w1==w2):
-    print('two owner values are equal')
+# # 31.Wallet Class
+# class Wallet:
+#     def __init__(self,owner,amount):
+#         self.owner=owner
+#         self.amount=amount
+#     def __add__(self,self2):
+#         newAmount=self.amount +  self2.amount 
+#         return Wallet(self.owner,newAmount) 
+#     def __sub__(self,self2):
+#         newAmount=abs(self.amount - self2.amount)
+#         return Wallet(self.owner,newAmount)
+#     def __eq__(self, self2):
+#         return self.amount== self2.amount
+#     def __str__(self):
+#         return (f"Owner name is {self.owner} and amount{self.amount}")
+# w1=Wallet('Elon',500) 
+# w2=Wallet('Eva',500)
+# amount=w1+w2
+# print(amount)
+# elimanet=w1-w2
+# print(elimanet)
+# if(w1==w2):
+#     print('two owner values are equal')
+# else:
+#      print('two owner values are not equal')   
+
+
+# 32:Rectangle Class
+class Rectangle:
+    def __init__(self,width,height):
+        self.width=width
+        self.height=height
+    def area(self): 
+         return self.width * self.height  
+    def __eq__(self,self2):
+        area1=self.area()
+        area2=self2.area()
+        return area1 == area2   
+    def __lt__(self,self2):
+        area1=self.area()
+        area2=self2.area()
+        return area1 < area2 
+    def __mul__(self,scalar):
+            return self.width * scalar, self.height * scalar
+r1=Rectangle(3,4)    
+r2=Rectangle(3,4)
+print(r1.area())
+print(r2.area())
+if(r1==r2):
+    print("Two rectangle are equal")
 else:
-     print('two owner values are not equal')   
+      print("Two rectangle are not equal")   
+if(r1<r2):
+    print("r1 rectangle are less  r2")
+else:    
+    print("r1 rectangle are not less r2")
+r3=r1*2
+print(r3)    
+
