@@ -16,14 +16,14 @@
 <h2>Website</h2>
 <a href='https://www.python.org/doc/'>Python Documentation</a>
 <h1>🚀PDF File for Interview Practice</h1>
-<p>This document helps beginners understand core Python concepts such as Loops, Functions, File Input/Output, and Recursion with clear explanations and practical examples. It demonstrates how these concepts are applied in Python programs to solve real-world problems efficiently. </p>
+<p>This document is designed to help you prepare for Python Object-Oriented Programming (OOP) interviews. It contains important questions, explanations, and examples to strengthen your understanding of OOP concepts and practical applications in Python. </p>
 <h6><b>:bulb:What You Will Learn</b></h6>
 <ul>
-  <li>How to use loops to repeat tasks and iterate over data.</li>
-  <li>How to define and call functions, including default arguments.</li>
-  <li>How to read from and write to files in Python.</li>
-  <li>How recursion works and how to implement recursive functions like factorial and Fibonacci.</li>
-  <li>Practical coding examples to strengthen your understanding and problem-solving skills.</li>
+  <li>Key OOP concepts: Classes, Objects, Inheritance, Polymorphism, Encapsulation, and Abstraction.</li>
+  <li>How to define and use classes and objects effectively.</li>
+  <li>Implementing methods, constructors (__init__), and special dunder methods like __str__ and __eq__.</li>
+  <li>Solving real-world problems using Python OOP.</li>
+  <li>Practice questions with answers to boost your interview readiness.</li>
 </ul>
 <b><a href='https://drive.google.com/file/d/1NC4bEgm2doWNFwNCE0P1hZjvTZZyPGZV/view?usp=sharing'>PDF File</a></b>
 <hr></hr>
