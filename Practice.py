@@ -709,35 +709,36 @@
 #      print('two owner values are not equal')   
 
 
-# 32:Rectangle Class
-class Rectangle:
-    def __init__(self,width,height):
-        self.width=width
-        self.height=height
-    def area(self): 
-         return self.width * self.height  
-    def __eq__(self,self2):
-        area1=self.area()
-        area2=self2.area()
-        return area1 == area2   
-    def __lt__(self,self2):
-        area1=self.area()
-        area2=self2.area()
-        return area1 < area2 
-    def __mul__(self,scalar):
-            return Rectangle(self.width * scalar, self.height * scalar)
-r1=Rectangle(3,4)    
-r2=Rectangle(3,4)
-print(r1.area())
-print(r2.area())
-if(r1==r2):
-    print("Two rectangle are equal")
-else:
-      print("Two rectangle are not equal")   
-if(r1<r2):
-    print("r1 rectangle are less  r2")
-else:    
-    print("r1 rectangle are not less r2")
-r3=r1*2
-print(r3.area())    
+# # 32:Rectangle Class
+# class Rectangle:
+#     def __init__(self,width,height):
+#         self.width=width
+#         self.height=height
+#     def area(self): 
+#          return self.width * self.height  
+#     def __eq__(self,self2):
+#         area1=self.area()
+#         area2=self2.area()
+#         return area1 == area2   
+#     def __lt__(self,self2):
+#         area1=self.area()
+#         area2=self2.area()
+#         return area1 < area2 
+#     def __mul__(self,scalar):
+#             return Rectangle(self.width * scalar, self.height * scalar)
+# r1=Rectangle(3,4)    
+# r2=Rectangle(3,4)
+# print(r1.area())
+# print(r2.area())
+# if(r1==r2):
+#     print("Two rectangle are equal")
+# else:
+#       print("Two rectangle are not equal")   
+# if(r1<r2):
+#     print("r1 rectangle are less  r2")
+# else:    
+#     print("r1 rectangle are not less r2")
+# r3=r1*2
+# print(r3.area())    
 
+# 33 . 
