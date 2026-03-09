@@ -739,6 +739,60 @@
 # else:    
 #     print("r1 rectangle are not less r2")
 # r3=r1*2
-# print(r3.area())    
+# print(r3.area())
+# 
+#     
 
-# 33 .ok got it.
+# 33 .Library Class
+# Attributes:
+
+# books (list)
+
+# Implement:
+
+# __len__
+
+# __getitem__
+
+# __contains__
+
+# __str__
+
+class Library:
+    def __init__(self,lists):
+        self.lists=lists
+    def __len__(self):
+        return (len(self.lists))
+
+book=Library(["Math", "Physics", "Chemistry"])
+print(len(book.lists))
+# 34. Temperature Class
+# Attributes:
+
+# celsius
+
+# Implement:
+
+# __add__
+
+# __sub__
+
+# __eq__
+
+# __str__
+
+# __float__ → float(temperature) করলে celsius return
+
+
+# 35. Shape Polymorphism
+# Method:
+
+# area()
+
+# Child classes:
+
+# Circle
+
+# Rectangle
+
+# Triangle
