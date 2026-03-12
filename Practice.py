@@ -764,7 +764,8 @@ class Library:
     def __len__(self):
         return (len(self.lists))
     def __getitem__(self):
-        
+    def __contains__(self):
+    def __str__(self):        
 
 
 book=Library(["Math", "Physics", "Chemistry"])
