@@ -763,14 +763,19 @@ class Library:
         self.lists=lists
     def __len__(self):
         return (len(self.lists))
-    def __getitem__(self):
-    def __contains__(self):
-    def __str__(self):        
+    def __getitem__(self,num):
+        return self.lists[num]
+    def __contains__(self,item):
+        it=item in self.lists
+        return it
+    def __str__(self): 
+        return (f"your  book here.")      
 
 
 book=Library(["Math", "Physics", "Chemistry"])
+print(book.lists[1])
 print(len(book.lists))
-
+print('Math' in book.lists)
 
 # 34. Temperature Class
 # Attributes:
