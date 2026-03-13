@@ -743,56 +743,51 @@
 # 
 #     
 
-# 33 .Library Class
-# Attributes:
+# # 33 .Library Class
+# class Library:
+#     def __init__(self,lists):
+#         self.lists=lists
+#     def __len__(self):
+#         return (len(self.lists))
+#     def __getitem__(self,num):
+#         return self.lists[num]
+#     def __contains__(self,item):
+#         it=item in self.lists
+#         return it
+#     def __str__(self): 
+#         return (f"your  book here.")      
+# book=Library(["Math", "Physics", "Chemistry"])
+# print(book.lists[1])
+# print(len(book.lists))
+# print('Math' in book.lists)
 
-# books (list)
+# # 34. Temperature Class
+# class Temperature:
+#     def __init__(self,celsius):
+#         self.celsius=celsius
+#     def __add__(self,cel2):
+#         return Temperature(self.celsius + cel2.celsius)
+#     def __sub__(self,cel2):
+#         return Temperature(self.celsius - cel2.celsius)
+#     def __eq__(self, cel2):
+#         return self.celsius == cel2.celsius
+#     def __str__(self):
+#         return (f'Here you can see Temperature at celsius srcoll.Right now temperature is {self.celsius}')
+#     def __float__(self):
+#         return self.celsius 
+# t1=Temperature(40.4)    
+# t2=Temperature(35)
+# print(t1) 
+# print(float(t1))
+# temAdd=t1+t2  
+# print(temAdd) 
+# temSub=t1-t2 
+# print(temSub)
+# if(t1==t2):
+#     print('temperature are equal')        
+# else:
+#     print('temperature are not equal')
 
-# Implement:
-
-# __len__
-
-# __getitem__
-
-# __contains__
-
-# __str__
-
-class Library:
-    def __init__(self,lists):
-        self.lists=lists
-    def __len__(self):
-        return (len(self.lists))
-    def __getitem__(self,num):
-        return self.lists[num]
-    def __contains__(self,item):
-        it=item in self.lists
-        return it
-    def __str__(self): 
-        return (f"your  book here.")      
-
-
-book=Library(["Math", "Physics", "Chemistry"])
-print(book.lists[1])
-print(len(book.lists))
-print('Math' in book.lists)
-
-# 34. Temperature Class
-# Attributes:
-
-# celsius
-
-# Implement:
-
-# __add__
-
-# __sub__
-
-# __eq__
-
-# __str__
-
-# __float__ → float(temperature) করলে celsius return
 
 
 # 35. Shape Polymorphism
