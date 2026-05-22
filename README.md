@@ -9,13 +9,13 @@
 <h1>🌩️About</h1>
 <p>A beginner-friendly Python OOP learning repository covering Classes, Objects, Inheritance, Polymorphism, Encapsulation, and Abstraction with concepts, examples, and interview practice PDF.</p>
 <h1>📌Projects</h1>
-<h1>Project1:Bank Management System</h1>
+<h3>Project1:Bank Management System</h3>
 <h6>Description:</h6>
 
 
 <p>A Python Object-Oriented Programming (OOP) based Bank Management System project that simulates basic banking operations such as account creation, deposit, withdrawal, balance checking. The project is designed to demonstrate core OOP concepts including classes, objects, inheritance, encapsulation, and modular code structure while improving problem-solving skills.</p>
 
-<p>💻<a href='https://github.com/BorshaDevi/Bank-Management-System'>View Code</a></p>
+<p>💻  <a href='https://github.com/BorshaDevi/Bank-Management-System'>View Code</a></p>
 
 <p>More Projects coming soon.....:!:</p>
 <h1>📖Resources</h1>
